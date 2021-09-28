@@ -7,27 +7,31 @@ export const Navbar = () => {
 
 	return (
 		<nav className="barra-superior">
-			<Link to="/">
-				<span className="titulo">PokeTienda</span>
-			</Link>
-			<div className="">
-				<Link className="dropdown">
+			<div className="nav align-left">
+				<Link to="/">
+					<span className="titulo">PokeTienda</span>
+				</Link>
+			</div>
+
+			<div className="nav align-right">
+				<Link className="cart-button dropdown">
 					<button
-						className=""
+						className="boton"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
 						aria-haspopup="true"
 						aria-expanded="false">
-						Cart {store.shoppingCart.length}
+						{store.shoppingCart.length}
+						<i className="fas fa-shopping-cart" />
 					</button>
-					<div className="">
+					<div className="cart-product">
 						{store.shoppingCart.map((item, index) => {
 							return (
-								<a key={index} className="cart-product" href="#">
+								<a key={index} className="" href="#">
 									{item}
 									<button
-										className="boton"
+										className="boton align-left"
 										onClick={() => {
 											actions.setDeleteShoppingCart(item);
 										}}>

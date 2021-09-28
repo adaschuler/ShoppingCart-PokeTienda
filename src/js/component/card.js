@@ -13,22 +13,28 @@ export const Card = props => {
 			<div className="ficha">
 				<img className={props.url} src={props.imagen} alt="Card image cap" />
 				<div className="ficha-body">
-					<h5 className="ficha-title">{props.title}</h5>
-					<p className="ficha-text">
-						{props.contenido.map((item, index) => {
-							return (
-								<p key={index}>
-									{item.label}: {item.value}
-								</p>
-							);
-						})}
-					</p>
-					<Link to={props.category + props.id} className="boton">
-						Detalle
+					<Link to={props.category + props.id} className="">
+						<div>
+							<p className="ficha-text">
+								{/* {props.contenido.map((item, index) => {
+									return (
+										<p key={index}>
+											{item.label}: {item.value}
+										</p>
+									);
+								})} */}
+							</p>
+						</div>
 					</Link>
-					<button onClick={() => actions.setShoppingCart(props.title)} className="boton">
-						<i className="fa fa-heart" />
-					</button>
+					<div>
+						<button onClick={() => actions.setShoppingCart(props.title)} className="boton compra">
+							ATRAPALO YA
+						</button>
+					</div>
+					<div>
+						<h5 className="ficha-title">{props.title}</h5>
+						<h5 className="ficha-title">{props.peso}</h5>
+					</div>
 				</div>
 			</div>
 		</div>
