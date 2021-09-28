@@ -1,6 +1,9 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			pokemonList: [],
+			urlPokemon: "https://pokeapi.co/api/v2/pokemon/",
+			shoppingCart: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -15,6 +18,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
+			setShoppingCart: tituloproducto => {
+				const store = getStore();
+				if (store.shoppingCart.includes(tituloproducto) === false) {
+					setStore({ shoppingCart: [...store.shoppingCart, tituloproducto] });
+				}
+			},
+			setDeleteShoppingCart: tituloproducto => {
+				setStore({ shoppingCart: getStore().shoppingCart.filter(producto => producto !== tituloproducto) });
+			},
+			fetchPokemon: () => {
+				const URL = "https://pokeapi.co/api/v2/pokemon/";
+				const OBJCONFIG = {
+					method: "GET",
+					headers: {
+						"Content-type": "aplication/json"
+					}
+				};
+
+				fetch(URL, OBJCONFIG)
+					.then(res => res.json()) //Texto plano
+					.then(data => setStore({ pokemonList: data.results })); //Obtienes los datos
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

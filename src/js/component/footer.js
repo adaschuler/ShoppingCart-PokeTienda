@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import github from "../../img/github.png";
 
 export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
+	<footer className="barra-inferior">
 		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
+			Made by <img src={github} width="30px" height="30px" />{" "}
+			<a href="https://github.com/adaschuler">Ada Schüler</a>, with love!
 		</p>
 	</footer>
 );
