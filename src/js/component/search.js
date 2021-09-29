@@ -1,12 +1,23 @@
 /* import React, { useState } from "react";
 
+function SearchList({ filteredPokemons }) {
+  const filtered = filteredPokemons.map(pokemon =>  <Card key={item.id} pokemon={item} />); 
+  return (
+    <div>
+      {filtered}
+    </div>
+  );
+}
+
+export default SearchList;
+
 function Search({ details }) {
 	const [searchField, setSearchField] = useState("");
 
-	const filteredPersons = details.filter(person => {
+	const filteredPokemons = details.filter(pokemon => {
 		return (
-			person.name.toLowerCase().includes(searchField.toLowerCase()) ||
-			person.email.toLowerCase().includes(searchField.toLowerCase())
+			pokemon.name.toLowerCase().includes(searchField.toLowerCase()) ||
+			pokemon.email.toLowerCase().includes(searchField.toLowerCase())
 		);
 	});
 
@@ -17,7 +28,7 @@ function Search({ details }) {
 	function searchList() {
 		return (
 			<Scroll>
-				<SearchList filteredPersons={filteredPersons} />
+				<SearchList filteredPokemons={filteredPokemons} />
 			</Scroll>
 		);
 	}
@@ -29,9 +40,9 @@ function Search({ details }) {
 			</div>
 			<div className="pa2">
 				<input
-					className="pa3 bb br3 grow b--none bg-lightest-blue ma3"
+					className="casilla"
 					type="search"
-					placeholder="Search People"
+					placeholder="Buscar Pokemones"
 					onChange={handleChange}
 				/>
 			</div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Card } from "../component/card";
-import { Search } from "../component/search";
+/* import { Search } from "../component/search"; */
 
 export const Pokemones = () => {
 	const { store, actions } = useContext(Context);
@@ -26,34 +26,18 @@ export const Pokemones = () => {
 					placeholder="Buscar Pokemones"
 					/* onChange={handleChange} */
 				/>
-				<button type="submit">
+				<button type="submit" className="boton">
 					<i className="fas fa-search" />
 				</button>
 			</div>
 			<div className="responsive center">
 				{store.pokemonList.map((item, index) => {
-					/* const dataPokemon = [
-						{
-							label: "Peso",
-							value: item.height
-						},
-						{
-							label: "Other",
-							value: item.other
-						},
-						{
-							label: "Imagen",
-							value: item.front_default
-						}
-					]; */
 					return (
 						<Card
 							key={index}
 							title={item.name}
-							imagen={item.front_default}
-							peso={item.height}
+							/* imagen={item.sprites.front_default} */
 							url={item.url}
-							/* contenido={dataPokemon} */
 							category={"/vista-detalle/"}
 							id={index}
 						/>

@@ -55,10 +55,6 @@
     display: table;
     margin: 0 auto;
 }
-/* .center{
-    align-items: center;
-    margin: 0 auto;
-} */
 /* For desktop: */
 @media(min-width:768px){
     .responsive{
@@ -104,7 +100,7 @@ A:visited {
 }
 .titulo{
     font-size: 30px;
-    margin-left: 5px;
+    margin-left: 2px;
 }
 .boton{
     background-color: rgba(96, 152, 224, 0.87);
@@ -117,8 +113,9 @@ A:visited {
     font-size: 16px;
 }
 .compra{
-    float: right;
-    margin-right: 20px;
+    margin-top: 50px;
+    display: table;
+    margin: 0 auto;
 }
 .ficha{
     width:300px;
@@ -140,9 +137,10 @@ A:visited {
 
 .ficha-body{
     background-color:whitesmoke;
+    display: table;
 }
 .ficha-title{
-    background-color:whitesmoke;
+    margin-top: 10px;
 }
 .ficha-text{
     background-color:whitesmoke;
@@ -152,6 +150,10 @@ A:visited {
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.casilla{
+    font-size: 16px;
+    padding: 13px 32px;
 }
 .barra-inferior{
     width: 100%;
