@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
+import "../../styles/navbar.scss";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
@@ -13,7 +14,7 @@ export const Navbar = () => {
 				</Link>
 			</div>
 
-			<div className="nav align-right">
+			<div className="align-right">
 				<Link className="cart-button dropdown">
 					<button
 						className="boton"

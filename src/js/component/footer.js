@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import github from "../../img/github.png";
+import "../../styles/footer.scss";
 
 export const Footer = () => (
 	<footer className="barra-inferior">
