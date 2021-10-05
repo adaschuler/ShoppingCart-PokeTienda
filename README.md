@@ -21,8 +21,8 @@ https://pokeapi.co/
 https://adaschuler.github.io/ShoppingCart-PokeTienda/
 
 <p>
-V01
- <img src="https://raw.githubusercontent.com/adaschuler/ShoppingCart-PokeTienda/master/src/img/PokeTiendaV01.png"/>
+Last Version
+ <img src="https://raw.githubusercontent.com/adaschuler/ShoppingCart-PokeTienda/master/src/img/PokeTiendaV02.png"/>
 </p>
 
 <p>
