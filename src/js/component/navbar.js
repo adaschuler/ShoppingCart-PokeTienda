@@ -10,14 +10,21 @@ export const Navbar = () => {
 		<nav className="barra-superior">
 			<div className="nav align-left">
 				<Link to="/">
+					<div className="logo">
+						<img
+							className=""
+							src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+							height="50px"
+						/>
+					</div>
 					<span className="titulo">PokeTienda</span>
 				</Link>
 			</div>
 
-			<div className="align-right">
+			<div className="carrodecompra align-right">
 				<Link className="cart-button dropdown">
 					<button
-						className="boton"
+						className="collapsible boton"
 						type="button"
 						id="dropdownMenuButton"
 						data-toggle="dropdown"
@@ -26,10 +33,10 @@ export const Navbar = () => {
 						{store.shoppingCart.length}
 						<i className="fas fa-shopping-cart" />
 					</button>
-					<div className="cart-product">
+					<div className="content cart-product">
 						{store.shoppingCart.map((item, index) => {
 							return (
-								<a key={index} className="" href="#">
+								<a key={index} className="content" href="#">
 									{item}
 									<button
 										className="boton align-left"

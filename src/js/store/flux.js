@@ -2,7 +2,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			pokemonList: [],
+			typeList: [],
 			urlPokemon: "https://pokeapi.co/api/v2/pokemon/",
+			urlType: "https://pokeapi.co/api/v2/type/",
 			shoppingCart: [],
 			demo: [
 				{
@@ -39,6 +41,19 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(URL, OBJCONFIG)
 					.then(res => res.json()) //Texto plano
 					.then(data => setStore({ pokemonList: data.results })); //Obtienes los datos
+			},
+			fetchType: () => {
+				const URL = "https://pokeapi.co/api/v2/type/";
+				const OBJCONFIG = {
+					method: "GET",
+					headers: {
+						"Content-type": "aplication/json"
+					}
+				};
+
+				fetch(URL, OBJCONFIG)
+					.then(res => res.json()) //Texto plano
+					.then(data => setStore({ typeList: data.results })); //Obtienes los datos
 			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

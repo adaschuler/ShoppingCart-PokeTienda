@@ -1,17 +1,24 @@
-
-.logo {
-    display: table;
-    margin: 0 auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 .superior{
     margin: auto;
     width: 100%;
     justify-content: center;
     background-color:rgba(174, 196, 226, 0.87);
     display: block;
+}
+.categorias{
+    margin: auto;
+    width: 100%;
+    background-color:rgba(238, 244, 252, 0.87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.categoriasgeneral{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        float: left;
 }
 
 .pokemones{
@@ -40,6 +47,20 @@
         justify-content: center;
         text-align: center;
     }
+    .categoriasecciones {
+        width:150px;
+        height:30px;
+        padding: 5px;
+        margin: 1px;
+        margin-bottom: 1px;
+        background-color: rgba(174, 196, 226, 0.87);
+        flex-wrap: wrap;
+        float:left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;   
+    }
 }
 /* For mobile and phones: */
 @media(max-width:768px){
@@ -57,16 +78,35 @@
         justify-content: center;
         text-align: center;   
    }
+   .categoriasecciones {
+    width:150px;
+    height:30px;
+    padding: 5px;
+    margin: 1px;
+    margin-bottom: 1px;
+    background-color: rgba(174, 196, 226, 0.87);
+    flex-wrap: wrap;
+    float:left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;   
 }
 
-
+}
+.seccionestexto{
+    font-size: 16px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
 .busqueda {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 .casilla{
