@@ -13,14 +13,17 @@ export const Pokemones = () => {
 		<div className="">
 			<div className="">
 				{store.pokemonList.map((item, index) => {
+					let linkUrl = index + 1;
 					return (
 						<Card
 							key={index}
 							title={item.name}
-							/* imagen={item.sprites.front_default} */
+							img1="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"
+							img2=".png"
 							url={item.url}
 							category={"/vista-detalle/"}
 							id={index}
+							indexlink={linkUrl}
 						/>
 					);
 				})}

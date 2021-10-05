@@ -18,7 +18,8 @@ export const Card = props => {
 							<p className="ficha-text">
 								<img
 									className={props.url}
-									src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+									src={props.img1 + props.indexlink + props.img2}
+									/* src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" */
 									width="160px"
 									alt="Card image cap"
 								/>
@@ -45,5 +46,8 @@ Card.propTypes = {
 	/* imagen: PropTypes.string, */
 	title: PropTypes.string,
 	id: PropTypes.object,
-	category: PropTypes.string
+	category: PropTypes.string,
+	img1: PropTypes.string,
+	indexlink: PropTypes.string,
+	img2: PropTypes.string
 };
